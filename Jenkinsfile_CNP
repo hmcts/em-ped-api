@@ -1,0 +1,45 @@
+#!groovy
+import uk.gov.hmcts.contino.AppPipelineDsl
+properties([
+  [
+    $class       : 'GithubProjectProperty',
+    displayName  : 'Presenting Evidence Digitally API',
+    projectUrlStr: 'https://github.com/hmcts/em-ped-api'
+  ],
+  pipelineTriggers([
+    [$class: 'GitHubPushTrigger']
+  ]),
+  disableConcurrentBuilds()
+])
+
+@Library("Infrastructure")
+
+def type = "java"
+def product = "em"
+def component = "ped-api"
+
+def secrets = [
+
+]
+
+static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
+  [$class     : 'AzureKeyVaultSecret',
+   secretType : 'Secret',
+   name       : secretName,
+   version    : '',
+   envVariable: envVar
+  ]
+}
+
+def vaultOverrides = [
+  'preview' : 'aat',
+  'spreview': 'saat'
+]
+
+withPipeline(type, product, component) {
+//  enableDbMigration('em-ped-api')
+  overrideVaultEnvironments(vaultOverrides)
+  loadVaultSecrets(secrets)
+
+//  syncBranchesWithMaster(['demo', 'perftest', 'ithc'])
+}
