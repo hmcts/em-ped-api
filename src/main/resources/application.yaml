@@ -1,5 +1,5 @@
 server:
-  port: 4550
+  port: 8080
 
 management:
   endpoint:
@@ -19,7 +19,7 @@ spring:
   config:
     import: "optional:configtree:/mnt/secrets/em/"
   application:
-    name: Presenting Evidence Digitally API
+    name: Presenting Evidence Digitally
 #  datasource:
 #    driver-class-name: org.postgresql.Driver
 #    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}${DB_OPTIONS:}
