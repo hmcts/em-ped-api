@@ -129,7 +129,7 @@ project.tasks['sonarqube'].dependsOn jacocoTestReport
 project.tasks['check'].dependsOn integration
 
 sonarqube {
-  skipProject = true
+  ignoreFailures = true
   properties {
     property "sonar.projectName", "Reform :: em-ped-api"
     property "sonar.projectKey", "uk.gov.hmcts.reform.em.ped:em-ped-api"
