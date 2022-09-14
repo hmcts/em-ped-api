@@ -37,6 +37,7 @@ def vaultOverrides = [
 ]
 
 withPipeline(type, product, component) {
+
   after('test') {
 
     publishHTML target: [
@@ -84,6 +85,7 @@ withPipeline(type, product, component) {
       reportName           : "Stitching API Unit Tests Report"
     ]
   }
+
 //  enableDbMigration('em-ped-api')
 //  overrideVaultEnvironments(vaultOverrides)
 //  loadVaultSecrets(secrets)
