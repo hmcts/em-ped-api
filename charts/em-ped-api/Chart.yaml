@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: "1.0"
+description: A Helm chart for Presenting Evidence Digitally API
+name: Presenting Evidence Digitally API
+home: https://github.com/hmcts/em-ped-api
+version: 0.0.1
+maintainers:
+  - name: HMCTS EM team
+dependencies:
+  - name: java
+    version: 4.0.1
+    repository: '@hmctspublic'
