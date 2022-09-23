@@ -10,6 +10,8 @@ import org.springframework.web.socket.messaging.SessionSubscribeEvent;
 import uk.gov.hmcts.reform.demo.domain.SubscriptionStatus;
 import uk.gov.hmcts.reform.demo.services.ParticipantsStatusService;
 
+import java.util.Objects;
+
 import static org.springframework.messaging.simp.SimpMessageHeaderAccessor.DESTINATION_HEADER;
 
 @Component
@@ -29,8 +31,8 @@ public class StompSubscribedEvent implements ApplicationListener<SessionSubscrib
         StompHeaderAccessor sha = StompHeaderAccessor.wrap(event.getMessage());
         String sessionId = sha.getSessionId();
         LOG.info(sessionId);
-        String destinationTopic = sha.getHeader(DESTINATION_HEADER).toString();
-        String hearingSessionId = destinationTopic.replaceAll("\\/.*\\/.*\\/", "");
+        String destinationTopic = Objects.requireNonNull(sha.getHeader(DESTINATION_HEADER)).toString();
+        String hearingSessionId = destinationTopic.replaceAll("/.*/.*/", "");
         participantsStatusService.updateStatus(hearingSessionId, sessionId, SubscriptionStatus.FOLLOWING);
     }
 }

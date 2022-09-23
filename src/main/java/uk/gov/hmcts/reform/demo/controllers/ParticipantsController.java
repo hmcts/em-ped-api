@@ -9,6 +9,7 @@ import uk.gov.hmcts.reform.demo.domain.ParticipantStatus;
 import uk.gov.hmcts.reform.demo.services.ParticipantsStatusService;
 
 import java.util.Collection;
+import java.util.Objects;
 
 @Controller
 public class ParticipantsController {
@@ -23,7 +24,7 @@ public class ParticipantsController {
     @MessageMapping("/participants/{sessionId}")
     @SendTo("/topic/participants/{sessionId}")
     public Collection<ParticipantStatus> statusChange(Message<ParticipantStatus> statusMessage) {
-        String simpSessionid = statusMessage.getHeaders().get("simpSessionId").toString();
+        String simpSessionid = Objects.requireNonNull(statusMessage.getHeaders().get("simpSessionId")).toString();
         return participantsStatusService.updateName(simpSessionid,
                 statusMessage.getPayload().getSessionId(), statusMessage.getPayload().getName());
     }
