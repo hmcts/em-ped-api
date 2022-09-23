@@ -32,7 +32,7 @@ public class StompSubscribedEvent implements ApplicationListener<SessionSubscrib
         String sessionId = sha.getSessionId();
         LOG.info(sessionId);
         String destinationTopic = Objects.requireNonNull(sha.getHeader(DESTINATION_HEADER)).toString();
-        String hearingSessionId = destinationTopic.replaceAll("/.*/.*/", "");
+        String hearingSessionId = destinationTopic.replaceAll("/.+/.+/", "");
         participantsStatusService.updateStatus(hearingSessionId, sessionId, SubscriptionStatus.FOLLOWING);
     }
 }
