@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static io.restassured.RestAssured.given;
 
-@SpringBootTest()
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class SampleSmokeTest {
     protected static final String CONTENT_TYPE_VALUE = "application/json";
 
