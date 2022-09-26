@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.demo.controllers;
+package uk.gov.hmcts.reform.controllers;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static io.restassured.RestAssured.given;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest()
 class SampleSmokeTest {
     protected static final String CONTENT_TYPE_VALUE = "application/json";
 
@@ -35,5 +35,5 @@ class SampleSmokeTest {
 
         Assertions.assertEquals(200, response.statusCode());
         Assertions.assertTrue(response.asString().startsWith("Welcome"));
-    } 
+    }
 }
