@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.demo.config;
+package uk.gov.hmcts.reform.em.ped.config;
 
 import groovy.util.logging.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +7,8 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.simp.stomp.StompHeaderAccessor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.messaging.SessionConnectedEvent;
-import uk.gov.hmcts.reform.demo.domain.SubscriptionStatus;
-import uk.gov.hmcts.reform.demo.services.ParticipantsStatusService;
+import uk.gov.hmcts.reform.em.ped.domain.SubscriptionStatus;
+import uk.gov.hmcts.reform.em.ped.services.ParticipantsStatusService;
 
 import java.util.List;
 import java.util.Optional;

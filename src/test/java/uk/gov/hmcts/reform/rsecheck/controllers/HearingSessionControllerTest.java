@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import uk.gov.hmcts.reform.demo.Application;
-import uk.gov.hmcts.reform.demo.domain.HearingSession;
+import uk.gov.hmcts.reform.em.ped.Application;
+import uk.gov.hmcts.reform.em.ped.domain.HearingSession;
 
 import java.time.LocalDateTime;
 import java.util.List;

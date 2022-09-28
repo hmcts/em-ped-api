@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.demo.config;
+package uk.gov.hmcts.reform.em.ped.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,8 +7,8 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.messaging.simp.stomp.StompHeaderAccessor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.messaging.SessionSubscribeEvent;
-import uk.gov.hmcts.reform.demo.domain.SubscriptionStatus;
-import uk.gov.hmcts.reform.demo.services.ParticipantsStatusService;
+import uk.gov.hmcts.reform.em.ped.domain.SubscriptionStatus;
+import uk.gov.hmcts.reform.em.ped.services.ParticipantsStatusService;
 
 import java.util.Objects;
 

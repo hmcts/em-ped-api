@@ -1,7 +1,7 @@
-package uk.gov.hmcts.reform.demo.services;
+package uk.gov.hmcts.reform.em.ped.services;
 
 import org.springframework.stereotype.Service;
-import uk.gov.hmcts.reform.demo.domain.HearingSession;
+import uk.gov.hmcts.reform.em.ped.domain.HearingSession;
 
 import java.util.Map;
 import java.util.UUID;

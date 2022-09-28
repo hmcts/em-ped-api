@@ -21,8 +21,8 @@ import org.springframework.web.socket.messaging.WebSocketStompClient;
 import org.springframework.web.socket.sockjs.client.SockJsClient;
 import org.springframework.web.socket.sockjs.client.Transport;
 import org.springframework.web.socket.sockjs.client.WebSocketTransport;
-import uk.gov.hmcts.reform.demo.Application;
-import uk.gov.hmcts.reform.demo.domain.ParticipantStatus;
+import uk.gov.hmcts.reform.em.ped.Application;
+import uk.gov.hmcts.reform.em.ped.domain.ParticipantStatus;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -38,8 +38,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static uk.gov.hmcts.reform.demo.domain.SubscriptionStatus.CONNECTED;
-import static uk.gov.hmcts.reform.demo.domain.SubscriptionStatus.FOLLOWING;
+import static uk.gov.hmcts.reform.em.ped.domain.SubscriptionStatus.CONNECTED;
+import static uk.gov.hmcts.reform.em.ped.domain.SubscriptionStatus.FOLLOWING;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(

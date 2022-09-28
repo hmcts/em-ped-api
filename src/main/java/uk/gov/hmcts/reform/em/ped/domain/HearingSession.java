@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.demo.domain;
+package uk.gov.hmcts.reform.em.ped.domain;
 
 import java.time.LocalDateTime;
 import java.util.List;

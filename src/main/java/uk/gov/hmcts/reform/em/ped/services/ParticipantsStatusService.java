@@ -1,11 +1,11 @@
-package uk.gov.hmcts.reform.demo.services;
+package uk.gov.hmcts.reform.em.ped.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
-import uk.gov.hmcts.reform.demo.domain.ParticipantStatus;
-import uk.gov.hmcts.reform.demo.domain.SubscriptionStatus;
+import uk.gov.hmcts.reform.em.ped.domain.ParticipantStatus;
+import uk.gov.hmcts.reform.em.ped.domain.SubscriptionStatus;
 
 import java.util.Collection;
 import java.util.Map;

@@ -16,8 +16,8 @@ import org.springframework.web.socket.messaging.WebSocketStompClient;
 import org.springframework.web.socket.sockjs.client.SockJsClient;
 import org.springframework.web.socket.sockjs.client.Transport;
 import org.springframework.web.socket.sockjs.client.WebSocketTransport;
-import uk.gov.hmcts.reform.demo.Application;
-import uk.gov.hmcts.reform.demo.domain.ScreenChange;
+import uk.gov.hmcts.reform.em.ped.Application;
+import uk.gov.hmcts.reform.em.ped.domain.ScreenChange;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

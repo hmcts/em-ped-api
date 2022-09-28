@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.demo.domain;
+package uk.gov.hmcts.reform.em.ped.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

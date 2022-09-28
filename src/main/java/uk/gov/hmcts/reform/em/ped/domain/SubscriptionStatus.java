@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.demo.domain;
+package uk.gov.hmcts.reform.em.ped.domain;
 
 public enum SubscriptionStatus {
     CONNECTED,

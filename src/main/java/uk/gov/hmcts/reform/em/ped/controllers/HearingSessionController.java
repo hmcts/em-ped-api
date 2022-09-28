@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.demo.controllers;
+package uk.gov.hmcts.reform.em.ped.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.hmcts.reform.demo.domain.HearingSession;
-import uk.gov.hmcts.reform.demo.domain.ParticipantStatus;
-import uk.gov.hmcts.reform.demo.services.HearingSessionService;
-import uk.gov.hmcts.reform.demo.services.ParticipantsStatusService;
+import uk.gov.hmcts.reform.em.ped.domain.HearingSession;
+import uk.gov.hmcts.reform.em.ped.domain.ParticipantStatus;
+import uk.gov.hmcts.reform.em.ped.services.HearingSessionService;
+import uk.gov.hmcts.reform.em.ped.services.ParticipantsStatusService;
 
 import java.net.URI;
 import java.net.URISyntaxException;

@@ -1,12 +1,12 @@
-package uk.gov.hmcts.reform.demo.controllers;
+package uk.gov.hmcts.reform.em.ped.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
-import uk.gov.hmcts.reform.demo.domain.ParticipantStatus;
-import uk.gov.hmcts.reform.demo.services.ParticipantsStatusService;
+import uk.gov.hmcts.reform.em.ped.domain.ParticipantStatus;
+import uk.gov.hmcts.reform.em.ped.services.ParticipantsStatusService;
 
 import java.util.Collection;
 import java.util.Objects;
