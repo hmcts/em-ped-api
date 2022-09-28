@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.rsecheck.controllers;
+package uk.gov.hmcts.reform.em.ped.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

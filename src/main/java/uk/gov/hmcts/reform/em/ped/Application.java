@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "uk.gov.hmcts.reform.demo.")
+@ComponentScan(basePackages = "uk.gov.hmcts.reform.em.ped.")
 @SuppressWarnings("HideUtilityClassConstructor") // Spring needs a constructor, its not a utility class
 public class Application {
 
