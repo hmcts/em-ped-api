@@ -183,9 +183,13 @@ ext {
 
 dependencies {
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-websocket'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
+
+  implementation group: 'org.springframework', name: 'spring-messaging', version: '5.3.23'
+
 
   implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.6.11'
 
@@ -208,7 +212,7 @@ dependencies {
   }
 }
 
-mainClassName = 'uk.gov.hmcts.reform.demo.Application'
+mainClassName = 'uk.gov.hmcts.reform.em.ped.Application'
 
 bootJar {
   archiveFileName = "em-ped-api.jar"
