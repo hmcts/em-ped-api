@@ -32,3 +32,18 @@ provider "vault" {
   address = "https://vault.reform.hmcts.net:6200"
 }
 
+resource "azurerm_web_pubsub" "ped_web_pubsub" {
+  name                          = "${local.app_full_name}-webpubsub-${var.env}"
+  location                      = var.location
+  resource_group_name           = "${local.app_full_name}-${var.env}"
+  sku                           = "Standard_S1"
+  capacity                      = 1
+  public_network_access_enabled = false
+  live_trace {
+    enabled                     = true
+    messaging_logs_enabled      = true
+    connectivity_logs_enabled   = false
+  }
+  common_tags                   = var.common_tags
+  managed_identity_object_ids   = [data.azurerm_user_assigned_identity.rpa-shared-identity.principal_id]
+}
