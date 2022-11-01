@@ -44,6 +44,10 @@ resource "azurerm_web_pubsub" "ped_web_pubsub" {
     messaging_logs_enabled      = true
     connectivity_logs_enabled   = false
   }
-  common_tags                   = var.common_tags
-  managed_identity_object_ids   = [data.azurerm_user_assigned_identity.rpa-shared-identity.principal_id]
+  tags                          = var.common_tags
+  
+  identity {
+   type         = "UserAssigned"
+   identity_ids = [data.azurerm_user_assigned_identity.rpa-shared-identity.principal_id]
+  }
 }
